@@ -22,6 +22,13 @@ Under an Upgrading section, the bullets after **Local installs (`sdpm update`).*
   edited one is rebuilt from its JSON; a filled radar chart still keeps its `_chartXml`.
   New `chart-radar` guide. Local mode and the AWS stack (SdpmRuntime).
 
+### Fixed
+
+- Charts: setting `valueAxis` or `categoryAxis` no longer drops theme styling of the
+  axis tick labels, axis lines and title. Only a chart read back from a PPTX keeps the
+  styling it came with; JSON written by hand or by an agent (e.g. a radar chart that sets
+  only the scoring scale) now gets the themed tick-label size, colour and font. (#630)
+
 ## [0.18.0] - 2026-11-15
 
 Japanese decks read more naturally: a `writing-ja` guide that the orchestrator and composers
